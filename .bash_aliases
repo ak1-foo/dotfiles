@@ -12,3 +12,5 @@ alias l='ls -CF'
 
 # vscode
 alias code='code -r'
+
+alias g='git'
