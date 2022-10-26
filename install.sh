@@ -10,6 +10,7 @@ cd $BASEDIR
 # exclusion file, dir list
 excludelist=(
     ".git"
+    ".gitignore"
 )
 
 exflag=false

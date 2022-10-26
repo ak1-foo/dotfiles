@@ -3,6 +3,8 @@
 	name = ak1-foo
 [core]
 	editor = vim
+[include]
+	path = ~/.gitconfig.local
 [alias]
 	aliases = !git config --get-regexp alias |  sed 's/^alias.//g' | sed 's/ / = /1'
 	ad = add
