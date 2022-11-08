@@ -93,7 +93,7 @@
 		"map ` Marks.activate",
 		"map gi enterInsertMode",
 		"",
-		"# free key = e n q t u z symbols",
+		"# free key = e q t u z symbols",
 		""
 	],
 	"linkHintCharacters": "tinurosayehlmwkjdvxgzpq",
