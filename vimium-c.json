@@ -5,56 +5,7 @@
 		"platform": "win",
 		"chromium": "107"
 	},
-	"exclusionRules": [
-		{
-			"passKeys": "",
-			"pattern": ":http://127.0.0.1:5500/"
-		},
-		{
-			"passKeys": "",
-			"pattern": ":https://mail.google.com/"
-		},
-		{
-			"passKeys": "",
-			"pattern": ":https://typing.tanonews.com/"
-		},
-		{
-			"passKeys": "",
-			"pattern": ":https://kbs.im/"
-		},
-		{
-			"passKeys": "",
-			"pattern": ":https://www.e-typing.ne.jp/"
-		},
-		{
-			"passKeys": "",
-			"pattern": ":http://typingx0.net/sushida/play.html"
-		},
-		{
-			"passKeys": "",
-			"pattern": ":https://www.powerlanguage.co.uk/wordle/"
-		},
-		{
-			"passKeys": "",
-			"pattern": ":https://anysweb.co.jp/keycheck/"
-		},
-		{
-			"passKeys": "",
-			"pattern": ":https://voxiom.io/"
-		},
-		{
-			"passKeys": "",
-			"pattern": ":https://sushida.net/play.html"
-		},
-		{
-			"passKeys": "",
-			"pattern": ":https://app.diagrams.net/"
-		},
-		{
-			"passKeys": "1 2 3 4 5 6 7 8 9 < > c ",
-			"pattern": ":https://www.youtube.com/"
-		}
-	],
+	"exclusionRules": [],
 	"grabBackFocus": true,
 	"keyLayout": 1,
 	"keyMappings": [
@@ -140,6 +91,7 @@
 		"map i focusInput",
 		"map m Marks.activateCreate",
 		"map ` Marks.activate",
+		"map gi enterInsertMode",
 		"",
 		"# free key = e n q t u z symbols",
 		""
