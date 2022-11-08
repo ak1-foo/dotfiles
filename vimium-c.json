@@ -1,0 +1,171 @@
+{
+	"name": "Vimium C",
+	"environment": {
+		"extension": "1.99.5",
+		"platform": "win",
+		"chromium": "107"
+	},
+	"exclusionRules": [
+		{
+			"passKeys": "",
+			"pattern": ":http://127.0.0.1:5500/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://mail.google.com/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://typing.tanonews.com/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://kbs.im/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://www.e-typing.ne.jp/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":http://typingx0.net/sushida/play.html"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://www.powerlanguage.co.uk/wordle/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://anysweb.co.jp/keycheck/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://voxiom.io/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://sushida.net/play.html"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://app.diagrams.net/"
+		},
+		{
+			"passKeys": "1 2 3 4 5 6 7 8 9 < > c ",
+			"pattern": ":https://www.youtube.com/"
+		}
+	],
+	"grabBackFocus": true,
+	"keyLayout": 1,
+	"keyMappings": [
+		"#!no-check",
+		"unmapAll",
+		"unmap -",
+		"",
+		"# scroll",
+		"map j scrollDown",
+		"map k scrollUp",
+		"map <c-d> scrollPageDown",
+		"map <c-u> scrollPageUp",
+		"map <c-f> scrollFullPageDown",
+		"map <c-b> scrollFullPageUp",
+		"map H scrollLeft",
+		"map J scrollDown",
+		"map K scrollUp",
+		"map L scrollRight",
+		"map gg scrollToTop",
+		"map G scrollToBottom",
+		"",
+		"# move in tab",
+		"map h goBack",
+		"map l goForward",
+		"map [ goPrevious",
+		"map ] goNext",
+		"map gu goUp",
+		"map gr goToRoot",
+		"",
+		"# move between tab",
+		"map b previousTab",
+		"map w nextTab",
+		"map <c-o> visitPreviousTab",
+		"map < moveTabLeft",
+		"map > moveTabRight",
+		"map ^ firstTab",
+		"map $ lastTab",
+		"",
+		"# close tab",
+		"map x removeTab",
+		"map X restoreTab",
+		"map d^ closeTabsOnLeft",
+		"map d$ closeTabsOnRight",
+		"map dd closeOtherTabs",
+		"",
+		"# LinkHints",
+		"map f LinkHints.activate",
+		"map F LinkHints.activateWithQueue",
+		"map <a-f>h LinkHints.activate action=\"hover\"",
+		"map <a-f>i LinkHints.activateOpenImage",
+		"",
+		"# Vomnibar",
+		"map s Vomnibar.activate",
+		"map o Vomnibar.activateInNewTab",
+		"map a Vomnibar.activateBookmarks",
+		"map A Vomnibar.activateBookmarksInNewTab",
+		"",
+		"# zoom",
+		"map + zoomIn",
+		"map - zoomOut",
+		"map = zoomReset",
+		"",
+		"# URL",
+		"map yy copyCurrentUrl",
+		"map yt copyCurrentTitle",
+		"map p openCopiedUrlInCurrentTab",
+		"map P openCopiedUrlInNewTab",
+		"map ge Vomnibar.activateEditUrl",
+		"",
+		"# find mode",
+		"map / enterFindMode",
+		"map n performFind",
+		"map N performBackwardsFind",
+		"",
+		"# visual mode",
+		"map v enterVisualMode",
+		"map V enterVisualLineMode",
+		"",
+		"# misc",
+		"map c closeDownloadBar",
+		"map ? showHelp",
+		"map r reload",
+		"map i focusInput",
+		"map m Marks.activateCreate",
+		"map ` Marks.activate",
+		"",
+		"# free key = e n q t u z symbols",
+		""
+	],
+	"linkHintCharacters": "tinurosayehlmwkjdvxgzpq",
+	"linkHintNumbers": "tinorsa0123456789",
+	"newTabUrl": "https://www.google.com/search?q=",
+	"searchEngines": [
+		"yt|youtube: http://www.youtube.com/results?search_query=%s Youtube",
+		"tw|twitter: https://twitter.com/search?q=%s Twitter",
+		""
+	],
+	"showActionIcon": false,
+	"userDefinedCss": [
+		"/* hint color setting */",
+		".D>.LH{background:#aaaaaa; border:0.01px solid #aaaaaa;}",
+		"",
+		"/* button label */",
+		"/* not hit yet */",
+		".R{color:#000000}",
+		"/* hint */",
+		".MC{color:#dddddd}",
+		"/* special focus */",
+		".BH{color:#ff0000}",
+		""
+	],
+	"vimSync": true,
+	"ignoreKeyboardLayout": 2
+}
