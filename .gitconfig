@@ -15,4 +15,6 @@
 	cl = clone
 	br = branch
 	df = diff
+	dfs = diff --staged
+	dfc = diff --cached
 	sw = switch
