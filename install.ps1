@@ -9,6 +9,11 @@ $files = @(
     }
 )
 
+$originalDirectory = Get-Location
+Set-Location $PSScriptRoot
+
 foreach ($file in $files) {
     New-Item -Value $file.filename -Path $file.targetPath -Name $file.filename -ItemType SymbolicLink
 }
+
+Set-Location $originalDirectory
