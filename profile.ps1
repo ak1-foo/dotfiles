@@ -1,6 +1,6 @@
 Set-PSReadlineOption -EditMode vi
 
 Set-Alias -Name g -Value git
-function c() {
+function vs() {
     code -r $args
 }
