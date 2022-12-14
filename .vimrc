@@ -46,12 +46,21 @@ if(exists("g:vscode"))
 endif
 
 " Plugins
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    \ >/dev/null 2>&1
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin()
+	" plugin
     Plug 'scrooloose/nerdtree'
     Plug 'itchyny/lightline.vim'
     Plug 'markonm/traces.vim'
     Plug 'skanehira/translate.vim'
     Plug 'skanehira/translate.vim'
+	" color scheme
     Plug 'tomasr/molokai'
 call plug#end() 
 
