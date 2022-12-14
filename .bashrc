@@ -91,3 +91,6 @@ if ! shopt -oq posix; then
 fi
 
 set -o vi
+if [ -f ~/.bashrc.local ]; then
+    . ~/.bashrc.local
+fi
