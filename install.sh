@@ -30,3 +30,6 @@ for file in .??*; do
         ln -snfv ${PWD}/"$file" ~/"$file"
     fi
 done
+
+# install neovim (nvim) setting
+ln -snfv ${PWD}/init.vim ~/.config/init.vim 
