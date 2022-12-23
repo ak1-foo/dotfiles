@@ -32,4 +32,4 @@ for file in .??*; do
 done
 
 # install neovim (nvim) setting
-ln -snfv ${PWD}/init.vim ~/.config/init.vim 
+ln -snfv ${PWD}/init.vim ~/.config/nvim/init.vim 
