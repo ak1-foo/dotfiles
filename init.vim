@@ -59,6 +59,8 @@ Plug 'kaz399/spzenhan.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 " color scheme
 Plug 'tomasr/molokai'
@@ -112,6 +114,9 @@ autocmd TermOpen * :startinsert
 
 " airline
 let g:airline_theme = 'wombat'
+
+" easymotion
+nmap <Leader>s <Plug>(easymotion-overwin-w)
 
 " gitgutter
 set updatetime=100
