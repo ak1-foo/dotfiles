@@ -59,6 +59,7 @@ Plug 'kaz399/spzenhan.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 " color scheme
 Plug 'tomasr/molokai'
 call plug#end()
@@ -109,4 +110,17 @@ autocmd TermOpen * :startinsert
 " Escでターミナルのインサートモードを抜ける
 :tnoremap <Esc> <C-\><C-n>
 
-let g:airline_theme = 'molokai'
+" airline
+let g:airline_theme = 'wombat'
+
+" gitgutter
+set updatetime=100
+let g:gitgutter_override_sign_column_highlight = 0
+" molokai background = 234
+highlight SignColumn ctermbg=234
+let g:gitgutter_sign_added = '>>'
+let g:gitgutter_sign_modified = '<>'
+let g:gitgutter_sign_removed = '<<'
+highlight gitgutteradd    guifg=#009900 ctermfg=2
+highlight gitgutterchange guifg=#0000ff ctermfg=6
+highlight gitgutterdelete guifg=#ff2222 ctermfg=1
