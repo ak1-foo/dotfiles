@@ -62,6 +62,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'simeji/winresizer'
 " color scheme
 Plug 'tomasr/molokai'
 call plug#end()
@@ -106,7 +107,7 @@ let g:clipboard = {
 " 新規タブでターミナルモードを起動
 nnoremap <silent> tt <cmd>terminal<CR>
 " 下分割でターミナルモードを起動
-nnoremap <silent> tx <cmd>belowright new<CR><cmd>terminal<CR>
+nnoremap <silent> tb <cmd>belowright new<CR><cmd>resize 15<CR><cmd>terminal<CR>
 " ターミナルを開いたらに常にinsertモードに入る
 autocmd TermOpen * :startinsert
 " Escでターミナルのインサートモードを抜ける
