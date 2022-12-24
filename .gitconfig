@@ -11,10 +11,11 @@
 	cm = commit -m
 	ps = push
 	pl = pull
-	st = status -s
+	st = status -s --untracked-files=all
 	cl = clone
 	br = branch
 	df = diff
 	dfs = diff --staged
 	dfc = diff --cached
 	sw = switch
+	lg = log --oneline
