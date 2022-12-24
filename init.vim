@@ -62,6 +62,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 " color scheme
 Plug 'tomasr/molokai'
 call plug#end()
@@ -116,7 +117,7 @@ autocmd TermOpen * :startinsert
 let g:airline_theme = 'wombat'
 
 " easymotion
-nmap <Leader>s <Plug>(easymotion-overwin-w)
+nmap <Leader>f <Plug>(easymotion-overwin-w)
 
 " gitgutter
 set updatetime=100
