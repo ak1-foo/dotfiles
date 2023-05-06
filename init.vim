@@ -105,11 +105,11 @@ let g:clipboard = {
             \ }
 
 " setting of terminal mode
-" 新規タブでターミナルモードを起動
-nnoremap <silent> tt <cmd>terminal<CR>
-" 下分割でターミナルモードを起動
-nnoremap <silent> tb <cmd>belowright new<CR><cmd>resize 15<CR><cmd>terminal<CR>
-" ターミナルを開いたらに常にinsertモードに入る
+" open terminal with new tab
+nnoremap <silent> <Leader>tt <cmd>tabnew<CR><cmd>terminal<CR>
+" open terminal at the bottom
+nnoremap <silent> <Leader>tb <cmd>belowright new<CR><cmd>resize 15<CR><cmd>terminal<CR>
+" start terminal with insert mode
 autocmd TermOpen * :startinsert
 " Escでターミナルのインサートモードを抜ける
 :tnoremap <Esc> <C-\><C-n>
