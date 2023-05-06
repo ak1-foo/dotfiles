@@ -26,6 +26,7 @@ nmap <Leader>r :source $MYVIMRC<CR>
 nmap <Leader>p :PlugInstall<CR>
 nmap <Leader>. :edit $MYVIMRC<CR>
 nmap <Leader>n :NERDTreeToggle<CR>
+nmap <Leader>tn <cmd>tabnew<CR>
 
 " turn off IME when you move to Normal Mode
 if executable('zenhan')
