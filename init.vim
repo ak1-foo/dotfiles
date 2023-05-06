@@ -111,7 +111,7 @@ nnoremap <silent> <Leader>tt <cmd>tabnew<CR><cmd>terminal<CR>
 nnoremap <silent> <Leader>tb <cmd>belowright new<CR><cmd>resize 15<CR><cmd>terminal<CR>
 " start terminal with insert mode
 autocmd TermOpen * :startinsert
-" Escでターミナルのインサートモードを抜ける
+" enter normal mode in terminal in nvim
 :tnoremap <Esc> <C-\><C-n>
 
 " airline
