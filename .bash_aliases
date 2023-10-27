@@ -14,3 +14,4 @@ alias l='ls -CF'
 alias vs='code -r'
 
 alias g='git'
+alias clip='xsel --clipboard --input'
