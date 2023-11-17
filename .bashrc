@@ -94,3 +94,7 @@ set -o vi
 if [ -f ~/.bashrc.local ]; then
     . ~/.bashrc.local
 fi
+
+if [ -f ~/.bashrc.proxy ]; then
+    . ~/.bashrc.proxy
+fi
