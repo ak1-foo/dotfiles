@@ -18,4 +18,4 @@
 	dfs = diff --staged
 	dfc = diff --cached
 	sw = switch
-	lg = log --oneline
+	lg = log --oneline --decorate --graph
