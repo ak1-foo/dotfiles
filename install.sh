@@ -27,14 +27,14 @@ for file in .??*; do
 
     if [[ $exflag == false ]]; then
         # make symbolic link, overwrite if already exists
-        ln -snfv ${PWD}/"$file" ~/"$file"
+        ln -snfv ${PWD}/"$file" $HOME/"$file"
     fi
 done
 
 # install neovim (nvim) setting
-nvim_config_path="~/.config/nvim"
+nvim_config_path="$HOME/.config/nvim"
 # if there is no nvim config dir, make it
 if [ ! -d "$nvim_config_path" ]; then
     mkdir -p "$nvim_config_path"
 fi
-ln -snfv ${PWD}/init.vim ~/.config/nvim/init.vim 
+ln -snfv ${PWD}/init.vim $HOME/.config/nvim/init.vim

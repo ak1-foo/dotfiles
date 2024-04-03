@@ -1,0 +1,13 @@
+on: [push]
+jobs:
+    linux-test:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - run: bash ./install.sh
+
+    windows-test:
+        runs-on: windows-latest
+        steps:
+            - uses: actions/checkout@v4
+            - run: .\install.ps1
