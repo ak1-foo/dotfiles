@@ -32,4 +32,9 @@ for file in .??*; do
 done
 
 # install neovim (nvim) setting
+nvim_config_path="~/.config/nvim"
+# if there is no nvim config dir, make it
+if [ ! -d "$nvim_config_path" ]; then
+    mkdir -p "$nvim_config_path"
+fi
 ln -snfv ${PWD}/init.vim ~/.config/nvim/init.vim 
