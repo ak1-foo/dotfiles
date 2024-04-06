@@ -6,3 +6,14 @@ charset = utf-8
 end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
+
+[{Makefile,makefile,*.mk}]
+indent_style = tab
+
+[*.md]
+trim_trailing_whitespace = false
+
+# follow PEP 8
+[*.py]
+indent_style = space
+indent_size = 4
