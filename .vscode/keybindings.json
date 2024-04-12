@@ -1,0 +1,49 @@
+[
+    // general
+    {
+        "key": "ctrl+n",
+        "command": "explorer.newFile"
+    },
+    {
+        "key": "ctrl+shift+n",
+        "command": "explorer.newFolder"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "editor.action.openLink"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "notifications.clearAll"
+    },
+
+    // vim-like
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.previousEditorInGroup"
+    },
+    {
+        "key": "ctrl+shift+h",
+        "command": "workbench.action.navigateLeft"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.navigateDown"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.navigateUp"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "workbench.action.navigateRight"
+    }
+]
