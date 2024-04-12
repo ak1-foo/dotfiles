@@ -11,6 +11,9 @@
     "explorer.confirmDragAndDrop": false,
     "workbench.startupEditor": "none",
 
+    // not supported in EditorConfig
+    "files.trimFinalNewlines": true,
+
     // GitHub Copilot
     "editor.inlineSuggest.enabled": true,
     "editor.acceptSuggestionOnEnter": "off",
