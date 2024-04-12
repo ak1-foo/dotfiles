@@ -1,0 +1,87 @@
+{
+    // general
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    "editor.lineNumbers": "relative",
+    "editor.renderWhitespace": "all",
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?、。「」てにをはがのともへでや",
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "files.autoGuessEncoding": true,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.startupEditor": "none",
+
+    // GitHub Copilot
+    "editor.inlineSuggest.enabled": true,
+    "editor.acceptSuggestionOnEnter": "off",
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on",
+        },
+    },
+
+    // application scope settings
+    "update.showReleaseNotes": false,
+    "window.newWindowDimensions": "maximized",
+    "security.workspace.trust.untrustedFiles": "open",
+
+    // theme
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#404040"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+
+    // terminal
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+    // pdf
+    "workbench.editorAssociations": {
+        "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "latex-workshop.view.pdf.invert": 0.94,
+    "latex-workshop.view.pdf.invertMode.brightness": 2,
+
+    // latex auto build
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-pdf",
+                "-interaction=nonstopmode",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+
+    // PATH
+    "vscode-neovim.neovimExecutablePaths.win32": "${env:NVIM_EXE_PATH}",
+}
