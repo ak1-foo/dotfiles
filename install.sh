@@ -7,6 +7,21 @@ set -eu
 BASEDIR=$(dirname "$0")
 cd "$BASEDIR"
 
+
+# setting up the local files
+create_local_file() {
+    local_file="$1"
+    # check if the local file exists
+    if [ ! -e "$local_file" ]; then
+        touch "$local_file"
+    fi
+}
+
+create_local_file "$PWD/.bashrc.local"
+create_local_file "$PWD/.bashrc.proxy"
+create_local_file "$PWD/.gitconfig.local"
+
+
 non_existent_files=()
 
 # create_symlink function
@@ -31,8 +46,10 @@ create_symlink "$PWD/.bash_aliases" "$HOME/.bash_aliases"
 create_symlink "$PWD/.bash_profile" "$HOME/.bash_profile"
 create_symlink "$PWD/.bashrc" "$HOME/.bashrc"
 create_symlink "$PWD/.bashrc.local" "$HOME/.bashrc.local"
+create_symlink "$PWD/.bashrc.proxy" "$HOME/.bashrc.proxy"
 create_symlink "$PWD/.editorconfig" "$HOME/.editorconfig"
 create_symlink "$PWD/.gitconfig" "$HOME/.gitconfig"
+create_symlink "$PWD/.gitconfig.local" "$HOME/.gitconfig.local"
 create_symlink "$PWD/.inputrc" "$HOME/.inputrc"
 create_symlink "$PWD/.profile" "$HOME/.profile"
 create_symlink "$PWD/.vimrc" "$HOME/.vimrc"
