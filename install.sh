@@ -7,43 +7,27 @@ set -eu
 BASEDIR=$(dirname $0)
 cd $BASEDIR
 
-# exclusion file, dir list
-excludelist=(
-    ".git"
-    ".gitignore"
-)
+# create_symlink function
+create_symlink() {
+    target_file="$1"
+    link_name="$2"
 
-exflag=false
-# in dotfiles dir, search file whose name start with .
-for file in .??*; do
-    exflag=false
-    # exclude file check
-    for exfile in ${excludelist[@]}; do
-        if [[ $file == $exfile ]]; then
-            exflag=true
-            continue
-        fi
-    done
+    # create directory if it doesn't exist
+    mkdir -p "$(dirname "$link_name")"
 
-    if [[ $exflag == false ]]; then
-        # make symbolic link, overwrite if already exists
-        ln -snfv ${PWD}/"$file" $HOME/"$file"
-    fi
-done
+    # create symbolic link
+    ln -snfv "$target_file" "$link_name"
+}
 
-# install neovim (nvim) setting
-nvim_config_path="$HOME/.config/nvim"
-# if there is no nvim config dir, make it
-if [ ! -d "$nvim_config_path" ]; then
-    mkdir -p "$nvim_config_path"
-fi
-ln -snfv ${PWD}/init.vim $HOME/.config/nvim/init.vim
-
-# install vscode setting
-vscode_config_path="$HOME/.config/Code/User"
-# if there is no vscode config dir, make it
-if [ ! -d "$vscode_config_path" ]; then
-    mkdir -p "$vscode_config_path"
-fi
-ln -snfv "${PWD}"/.vscode/settings.json "$vscode_config_path"/settings.json
-ln -snfv "${PWD}"/.vscode/keybindings.json "$vscode_config_path"/keybindings.json
+create_symlink "$PWD/.bash_aliases" "$HOME/.bash_aliases"
+create_symlink "$PWD/.bash_profile" "$HOME/.bash_profile"
+create_symlink "$PWD/.bashrc" "$HOME/.bashrc"
+create_symlink "$PWD/.bashrc.local" "$HOME/.bashrc.local"
+create_symlink "$PWD/.editorconfig" "$HOME/.editorconfig"
+create_symlink "$PWD/.gitconfig" "$HOME/.gitconfig"
+create_symlink "$PWD/.inputrc" "$HOME/.inputrc"
+create_symlink "$PWD/.profile" "$HOME/.profile"
+create_symlink "$PWD/.vimrc" "$HOME/.vimrc"
+create_symlink "$PWD/init.vim" "$HOME/.config/nvim/init.vim"
+create_symlink "$PWD/.vscode/settings.json" "$HOME/.config/Code/User/settings.json"
+create_symlink "$PWD/.vscode/keybindings.json" "$HOME/.config/Code/User/keybindings.json"
