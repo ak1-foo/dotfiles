@@ -10,7 +10,7 @@ set shiftwidth=4
 set expandtab
 set noswapfile
 set title
-set ttimeoutlen=0
+set ttimeoutlen=10
 
 noremap k gk
 noremap j gj
