@@ -4,8 +4,7 @@
 set -eu
 
 # cd to the dir which contains this file
-BASEDIR=$(dirname "$0")
-cd "$BASEDIR"
+cd "$(dirname "$0")"
 
 
 # setting up the local files
