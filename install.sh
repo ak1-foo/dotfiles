@@ -4,8 +4,8 @@
 set -eu
 
 # cd to the dir which contains this file
-BASEDIR=$(dirname $0)
-cd $BASEDIR
+BASEDIR=$(dirname "$0")
+cd "$BASEDIR"
 
 # create_symlink function
 create_symlink() {
