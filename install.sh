@@ -7,10 +7,18 @@ set -eu
 BASEDIR=$(dirname "$0")
 cd "$BASEDIR"
 
+non_existent_files=()
+
 # create_symlink function
 create_symlink() {
     target_file="$1"
     link_name="$2"
+
+    # check if the target file exists
+    if [ ! -e "$target_file" ]; then
+        non_existent_files+=("$target_file")
+        return
+    fi
 
     # create directory if it doesn't exist
     mkdir -p "$(dirname "$link_name")"
@@ -31,3 +39,10 @@ create_symlink "$PWD/.vimrc" "$HOME/.vimrc"
 create_symlink "$PWD/init.vim" "$HOME/.config/nvim/init.vim"
 create_symlink "$PWD/.vscode/settings.json" "$HOME/.config/Code/User/settings.json"
 create_symlink "$PWD/.vscode/keybindings.json" "$HOME/.config/Code/User/keybindings.json"
+
+# check if there are any non-existent files
+if [ ${#non_existent_files[@]} -gt 0 ]; then
+    echo ""
+    echo "The following target files were not found and no symlinks were created:"
+    printf "\e[31m %s \e[m\n" "${non_existent_files[@]}"
+fi
