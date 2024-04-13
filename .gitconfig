@@ -8,14 +8,17 @@
 [alias]
 	aliases = !git config --get-regexp alias |  sed 's/^alias.//g' | sed 's/ / = /1'
 	ad = add
+	adw = !"git diff -w --no-color | git apply --cached"
 	cm = commit -m
-	ps = push
+	ps = push -u origin HEAD
+	psf = push -u origin HEAD --force-with-lease
 	pl = pull
 	st = status -s --untracked-files=all
 	cl = clone
 	br = branch
 	df = diff
 	dfs = diff --staged
-	dfc = diff --cached
 	sw = switch
 	lg = log --oneline --decorate --graph
+	fc = fetch --prune
+	tree = log --graph --pretty=format:'%x09%C(auto) %h %C(green) %ai  %C(reset)by %C(cyan ul)%an%C(reset)  %C(auto)%s %d'
