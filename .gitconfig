@@ -2,7 +2,7 @@
 	email = 74660186+ak1-foo@users.noreply.github.com
 	name = ak1-foo
 [core]
-	editor = vim
+	editor = code --wait
 [include]
 	path = ~/.gitconfig.local
 [alias]
