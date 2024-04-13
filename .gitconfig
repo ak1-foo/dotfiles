@@ -16,6 +16,5 @@
 	br = branch
 	df = diff
 	dfs = diff --staged
-	dfc = diff --cached
 	sw = switch
 	lg = log --oneline --decorate --graph
