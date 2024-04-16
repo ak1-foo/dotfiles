@@ -53,6 +53,7 @@ create_symlink "$PWD/.inputrc" "$HOME/.inputrc"
 create_symlink "$PWD/.profile" "$HOME/.profile"
 create_symlink "$PWD/.vimrc" "$HOME/.vimrc"
 create_symlink "$PWD/.vimrc" "$HOME/.config/nvim/init.vim"
+create_symlink "$PWD/.Xmodmap" "$HOME/.Xmodmap"
 create_symlink "$PWD/.vscode/settings.json" "$HOME/.config/Code/User/settings.json"
 create_symlink "$PWD/.vscode/keybindings.json" "$HOME/.config/Code/User/keybindings.json"
 

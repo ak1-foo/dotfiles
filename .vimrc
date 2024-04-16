@@ -30,6 +30,9 @@ nmap <Leader>tn <cmd>tabnew<CR>
 if executable('zenhan')
     autocmd InsertLeave * :call system('zenhan 0')
     autocmd CmdlineLeave * :call system('zenhan 0')
+elseif executable('xdotool')
+    autocmd InsertLeave * :call system('xdotool key Eisu_toggle')
+    autocmd CmdlineLeave * :call system('xdotool key Eisu_toggle')
 endif
 
 " Get folding working with vscode neovim plugin
