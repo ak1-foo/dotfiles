@@ -111,3 +111,7 @@ if command -v pyenv >/dev/null 2>&1; then
     [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)"
 fi
+
+if command -v xmodmap >/dev/null 2>&1; then
+    xmodmap ~/.Xmodmap
+fi
