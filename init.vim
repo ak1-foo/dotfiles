@@ -65,18 +65,20 @@ set laststatus=2
 
 " Enable system clipboard integration
 set clipboard+=unnamedplus
-let g:clipboard = {
-            \   'name': 'myClipboard',
-            \   'copy': {
-            \      '+': 'win32yank.exe -i --crlf',
-            \      '*': 'win32yank.exe -i --crlf',
-            \    },
-            \   'paste': {
-            \      '+': 'win32yank.exe -o --lf',
-            \      '*': 'win32yank.exe -o --lf',
-            \   },
-            \   'cache_enabled': 1,
-            \ }
+if executable('win32yank.exe')
+    let g:clipboard = {
+                \   'name': 'myClipboard',
+                \   'copy': {
+                \      '+': 'win32yank.exe -i --crlf',
+                \      '*': 'win32yank.exe -i --crlf',
+                \    },
+                \   'paste': {
+                \      '+': 'win32yank.exe -o --lf',
+                \      '*': 'win32yank.exe -o --lf',
+                \   },
+                \   'cache_enabled': 1,
+                \ }
+endif
 
 " setting of terminal mode
 " open terminal with new tab
