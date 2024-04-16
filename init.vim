@@ -57,10 +57,6 @@ let &t_te .= "\e[2 q"
 
 " status line
 set laststatus=2
-"let g:lightline = {
-"            \ 'colorscheme': 'wombat',
-"            \ }
-"set wildmenu
 
 
 " Enable system clipboard integration
