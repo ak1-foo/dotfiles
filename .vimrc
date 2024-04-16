@@ -1,12 +1,13 @@
 let LANG = 'en_US.UTF-8'
 
+set number
 set relativenumber
-set clipboard+=unnamedplus
 set hlsearch
 set incsearch
 set ignorecase
 set tabstop=4
 set shiftwidth=4
+set expandtab
 set noswapfile
 set title
 set ttimeoutlen=10
@@ -15,17 +16,15 @@ noremap k gk
 noremap j gj
 noremap gk k
 noremap gj j
+nnoremap <ESC><ESC> :noh<CR>
+" Paste continuously to selected area in visual mode
+vnoremap p "_dP
 let mapleader = "\<Space>"
 nmap <Leader>w :w<CR>
-nmap <Leader>y myggVGy`y
+nmap <Leader>y mXggVG"+y`X
 nmap <Leader>r :source $MYVIMRC<CR>
 nmap <Leader>. :edit $MYVIMRC<CR>
-
-inoremap ( ()<LEFT>
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ' ''<LEFT>
-inoremap " ""<LEFT>
+nmap <Leader>tn <cmd>tabnew<CR>
 
 " turn off IME when you move to Normal Mode
 if executable('zenhan')
@@ -44,6 +43,7 @@ if(exists("g:vscode"))
     nnoremap za :call VSCodeNotify('editor.toggleFold')<CR>
 endif
 
+
 " change cursor form
 if has('vim_starting')
     " | insert mode
@@ -57,7 +57,31 @@ let &t_te .= "\e[2 q"
 
 " status line
 set laststatus=2
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
-set wildmenu
+
+
+" Enable system clipboard integration
+set clipboard+=unnamedplus
+if executable('win32yank.exe')
+    let g:clipboard = {
+                \   'name': 'myClipboard',
+                \   'copy': {
+                \      '+': 'win32yank.exe -i --crlf',
+                \      '*': 'win32yank.exe -i --crlf',
+                \    },
+                \   'paste': {
+                \      '+': 'win32yank.exe -o --lf',
+                \      '*': 'win32yank.exe -o --lf',
+                \   },
+                \   'cache_enabled': 1,
+                \ }
+endif
+
+" setting of terminal mode
+" open terminal with new tab
+nnoremap <silent> <Leader>tt <cmd>tabnew<CR><cmd>terminal<CR>
+" open terminal at the bottom
+nnoremap <silent> <Leader>tb <cmd>belowright new<CR><cmd>resize 15<CR><cmd>terminal<CR>
+" start terminal with insert mode
+autocmd TermOpen * :startinsert
+" enter normal mode in terminal in nvim
+:tnoremap <Esc> <C-\><C-n>
