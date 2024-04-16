@@ -23,9 +23,7 @@ let mapleader = "\<Space>"
 nmap <Leader>w :w<CR>
 nmap <Leader>y mXggVG"+y`X
 nmap <Leader>r :source $MYVIMRC<CR>
-nmap <Leader>p :PlugInstall<CR>
 nmap <Leader>. :edit $MYVIMRC<CR>
-nmap <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>tn <cmd>tabnew<CR>
 
 " turn off IME when you move to Normal Mode
@@ -46,28 +44,6 @@ if(exists("g:vscode"))
 endif
 
 
-call plug#begin()
-" plugin
-Plug 'scrooloose/nerdtree'
-Plug 'itchyny/lightline.vim'
-Plug 'markonm/traces.vim'
-Plug 'skanehira/translate.vim'
-Plug 'skanehira/translate.vim'
-Plug 'easymotion/vim-easymotion'
-Plug 'markonm/traces.vim'
-Plug 'skanehira/translate.vim'
-Plug 'kaz399/spzenhan.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-fugitive'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'simeji/winresizer'
-" color scheme
-Plug 'tomasr/molokai'
-call plug#end()
-
 " change cursor form
 if has('vim_starting')
     " | insert mode
@@ -86,8 +62,6 @@ set laststatus=2
 "            \ }
 "set wildmenu
 
-let NERDTreeShowHidden=1
-colorscheme molokai
 
 " Enable system clipboard integration
 set clipboard+=unnamedplus
@@ -113,21 +87,3 @@ nnoremap <silent> <Leader>tb <cmd>belowright new<CR><cmd>resize 15<CR><cmd>termi
 autocmd TermOpen * :startinsert
 " enter normal mode in terminal in nvim
 :tnoremap <Esc> <C-\><C-n>
-
-" airline
-let g:airline_theme = 'wombat'
-
-" easymotion
-nmap <Leader>f <Plug>(easymotion-overwin-w)
-
-" gitgutter
-set updatetime=100
-let g:gitgutter_override_sign_column_highlight = 0
-" molokai background = 234
-highlight SignColumn ctermbg=234
-let g:gitgutter_sign_added = '>>'
-let g:gitgutter_sign_modified = '<>'
-let g:gitgutter_sign_removed = '<<'
-highlight gitgutteradd    guifg=#009900 ctermfg=2
-highlight gitgutterchange guifg=#0000ff ctermfg=6
-highlight gitgutterdelete guifg=#ff2222 ctermfg=1
