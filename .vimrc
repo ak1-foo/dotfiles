@@ -19,9 +19,7 @@ let mapleader = "\<Space>"
 nmap <Leader>w :w<CR>
 nmap <Leader>y myggVGy`y
 nmap <Leader>r :source $MYVIMRC<CR>
-nmap <Leader>p :PlugInstall<CR>
 nmap <Leader>. :edit $MYVIMRC<CR>
-nmap <Leader>n :NERDTreeToggle<CR>
 
 inoremap ( ()<LEFT>
 inoremap { {}<LEFT>
@@ -46,25 +44,6 @@ if(exists("g:vscode"))
     nnoremap za :call VSCodeNotify('editor.toggleFold')<CR>
 endif
 
-" Plugins
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    \ >/dev/null 2>&1
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-call plug#begin()
-	" plugin
-    Plug 'scrooloose/nerdtree'
-    Plug 'itchyny/lightline.vim'
-    Plug 'markonm/traces.vim'
-    Plug 'skanehira/translate.vim'
-    Plug 'skanehira/translate.vim'
-	" color scheme
-    Plug 'tomasr/molokai'
-call plug#end() 
-
 " change cursor form
 if has('vim_starting')
     " | insert mode
@@ -82,6 +61,3 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
 set wildmenu
-
-let NERDTreeShowHidden=1
-colorscheme molokai
