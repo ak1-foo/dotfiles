@@ -16,3 +16,4 @@ alias ll='ls -alF'
 alias la='ls -A'
 
 alias g='git'
+__git_complete g __git_main
