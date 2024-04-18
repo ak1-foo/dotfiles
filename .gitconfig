@@ -9,7 +9,9 @@
 	aliases = !git config --get-regexp alias |  sed 's/^alias.//g' | sed 's/ / = /1'
 	ad = add
 	adw = !"git diff -w --no-color | git apply --cached"
-	cm = commit -m
+	cm = commit
+	cmv = commit --verbose
+	cmav = commit --all --verbose
 	ps = push -u origin HEAD
 	psf = push -u origin HEAD --force-with-lease
 	pl = pull
