@@ -16,4 +16,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 
 alias g='git'
+if [ -f /usr/share/bash-completion/completions/git ]; then
+    . /usr/share/bash-completion/completions/git
+fi
 __git_complete g __git_main
