@@ -54,8 +54,18 @@ create_symlink "$PWD/.profile" "$HOME/.profile"
 create_symlink "$PWD/.vimrc" "$HOME/.vimrc"
 create_symlink "$PWD/.vimrc" "$HOME/.config/nvim/init.vim"
 create_symlink "$PWD/.Xmodmap" "$HOME/.Xmodmap"
-create_symlink "$PWD/.vscode/settings.json" "$HOME/.config/Code/User/settings.json"
-create_symlink "$PWD/.vscode/keybindings.json" "$HOME/.config/Code/User/keybindings.json"
+
+case "$(uname -s)" in
+    Linux)
+        create_symlink "$PWD/.vscode/settings.json" "$HOME/.config/Code/User/settings.json"
+        create_symlink "$PWD/.vscode/keybindings.json" "$HOME/.config/Code/User/keybindings.json"
+        ;;
+    # for Windows
+    MINGW*)
+        create_symlink "$PWD/.vscode/settings.json" "$HOME/AppData/Roaming/Code/User/settings.json"
+        create_symlink "$PWD/.vscode/keybindings.json" "$HOME/AppData/Roaming/Code/User/keybindings.json"
+        ;;
+esac
 
 # check if there are any non-existent files
 if [ ${#non_existent_files[@]} -gt 0 ]; then
