@@ -10,4 +10,5 @@ jobs:
         runs-on: windows-latest
         steps:
             - uses: actions/checkout@v4
-            - run: .\install.ps1
+            - shell: bash
+              run: bash ./install.sh
