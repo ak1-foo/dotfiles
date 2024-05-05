@@ -6,6 +6,4 @@ bash ./install.sh
 ```
 
 ## in Windows
-```powershell
-.\install.ps1
-```
+use MinGW of git for windows

@@ -53,7 +53,7 @@
             "source": "Git Bash"
         },
     },
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
 
     // pdf
     "workbench.editorAssociations": {
