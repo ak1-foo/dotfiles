@@ -21,6 +21,7 @@
 	df = diff
 	dfs = diff --staged
 	sw = switch
+	swm = switch -d origin/main
 	lg = log --oneline --decorate --graph
 	fc = fetch --prune
 	tree = log --graph --pretty=format:'%x09%C(auto) %h %C(green) %ai  %C(reset)by %C(cyan ul)%an%C(reset)  %C(auto)%s %d'
