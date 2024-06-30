@@ -18,6 +18,7 @@
 	st = status -s --untracked-files=all
 	cl = clone
 	br = branch
+	brd = !"git branch | xargs git branch -d"
 	df = diff
 	dfs = diff --staged
 	sw = switch
