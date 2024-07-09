@@ -10,6 +10,11 @@
     "files.autoGuessEncoding": true,
     "explorer.confirmDragAndDrop": false,
     "workbench.startupEditor": "none",
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true
+    },
 
     // not supported in EditorConfig
     "files.trimFinalNewlines": true,
