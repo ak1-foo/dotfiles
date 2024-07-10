@@ -16,6 +16,9 @@
         "**/node_modules/*/**": true
     },
 
+    // dotfiles for devcontainer
+    "dotfiles.repository": "https://github.com/ak1-foo/dotfiles.git",
+
     // not supported in EditorConfig
     "files.trimFinalNewlines": true,
 
