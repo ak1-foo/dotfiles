@@ -15,8 +15,20 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 
-alias g='git'
-if [ -f /usr/share/bash-completion/completions/git ]; then
-    . /usr/share/bash-completion/completions/git
+# install git completion
+if ! [ -f "$HOME"/.git-completion.bash ]; then
+    echo "Downloading git-completion.bash..."
+    curl -o $HOME/.git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 fi
+source "$HOME"/.git-completion.bash
+
+# install git prompt
+if ! [ -f "$HOME"/.git-prompt.sh ]; then
+    echo "Downloading git-prompt.sh..."
+    curl -o $HOME/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+fi
+source "$HOME"/.git-prompt.sh
+
+# apply the git completion and prompt
+alias g='git'
 __git_complete g __git_main
