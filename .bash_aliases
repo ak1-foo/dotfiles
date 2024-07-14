@@ -18,14 +18,14 @@ alias la='ls -A'
 # install git completion
 if ! [ -f "$HOME"/.git-completion.bash ]; then
     echo "Downloading git-completion.bash..."
-    curl -o $HOME/.git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+    curl -s -o $HOME/.git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 fi
 source "$HOME"/.git-completion.bash
 
 # install git prompt
 if ! [ -f "$HOME"/.git-prompt.sh ]; then
     echo "Downloading git-prompt.sh..."
-    curl -o $HOME/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+    curl -s -o $HOME/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 fi
 source "$HOME"/.git-prompt.sh
 
