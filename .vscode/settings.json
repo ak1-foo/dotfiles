@@ -122,6 +122,9 @@
         "%DOCFILE%_minted%DOCFILE%",
     ],
 
-    // PATH
+    // Neovim
     "vscode-neovim.neovimExecutablePaths.win32": "nvim",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
 }
