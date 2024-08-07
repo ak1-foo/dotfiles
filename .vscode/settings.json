@@ -124,6 +124,7 @@
 
     // Neovim
     "vscode-neovim.neovimExecutablePaths.win32": "nvim",
+    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     },
