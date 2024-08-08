@@ -66,6 +66,9 @@ case "$(uname -s)" in
         create_symlink "$PWD/.vscode/settings.json" "$HOME/AppData/Roaming/Code/User/settings.json"
         create_symlink "$PWD/.vscode/keybindings.json" "$HOME/AppData/Roaming/Code/User/keybindings.json"
         ;;
+    Darwin)
+        create_symlink "$PWD/.vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+        create_symlink "$PWD/.vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
 esac
 
 # check if there are any non-existent files
