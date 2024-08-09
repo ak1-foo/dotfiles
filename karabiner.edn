@@ -1,0 +1,49 @@
+{
+    :devices {
+        :apple [{:product_id 0 :vendor_id 0}]
+    }
+    :layers {
+        :lower {:key :v :alone {:key :vk_none}}
+        :upper {:key :m :alone {:key :vk_none}}
+    }
+    :templates {
+        :open "open -a \"%s\""
+    }
+    :main [{
+        :des "Default Layer"
+        :rules [[:condi :apple :!lower :!upper]
+            [:##2 :q] [:##3 :l] [:##4 :e] [:##5 :w] [:##6 :comma] [:##7 :vk_none] [:##8 :vk_none] [:##9 :b] [:##0 :m] [:##hyphen :y] [:##equal_sign :h] [:##international3 :p]
+            [:##q :a] [:##w :o] [:##e :u] [:##r :i] [:##t :period] [:##y :vk_none] [:##u :vk_none] [:##i :g] [:##o :t] [:##p :n] [:##open_bracket :r] [:##close_bracket :s]
+            [:##a :c] [:##s :v] [:##d :x] [:##f :j] [:##g :escape] [:##h :vk_none] [:##j :vk_none] [:##k :z] [:##l :k] [:##semicolon :f] [:##quote :d] [:##backslash :hyphen]
+                    [:##x :left_shift] [:##c :spacebar]   [:##b :left_command] [:##n :left_command]   [:##comma :return_or_enter] [:##period :left_control]   
+        ]
+    },
+    {
+        :des "Lower Layer"
+        :rules [[:condi :apple :lower :!upper]
+            [:##2 :!S5] [:##3 :hyphen] [:##4 :backslash] [:##5 :!S6] [:##6 :grave_accent_and_tilde] [:##7 :vk_none] [:##8 :vk_none] [:##9 :vk_none] [:##0 :vk_none] [:##hyphen :vk_none] [:##equal_sign :vk_none] [:##international3 :vk_none]
+            [:##q :!Sequal_sign] [:##w :!S8] [:##e :slash] [:##r :equal_sign] [:##t :!Sgrave_accent_and_tilde] [:##y :vk_none] [:##u :vk_none] [:##i :delete_or_backspace] [:##o :left_arrow] [:##p :down_arrow] [:##open_bracket :up_arrow] [:##close_bracket :right_arrow]
+            [:##a :!S3] [:##s :!S4] [:##d :!Sslash] [:##f :!S2] [:##g :!S1] [:##h :vk_none] [:##j :vk_none] [:##k :vk_none] [:##l :home] [:##semicolon :page_down] [:##quote :page_up] [:##backslash :end]
+                    [:##x :left_shift] [:##c :spacebar]   [:##b :left_command] [:##n :left_command]   [:##comma :lang1] [:##period :left_control]   
+        ]
+    },
+    {
+        :des "Upper Layer"
+        :rules [[:condi :apple :!lower :upper]
+            [:##2 :!Ttab] [:##3 :7] [:##4 :8] [:##5 :9] [:##6 :comma] [:##7 :vk_none] [:##8 :vk_none] [:##9 :!Sbackslash] [:##0 :!Scomma] [:##hyphen :!Speriod] [:##equal_sign :!Sopen_bracket] [:##international3 :!Sclose_bracket]
+            [:##q :tab] [:##w :4] [:##e :5] [:##r :6] [:##t :period] [:##y :vk_none] [:##u :vk_none] [:##i :!Shyphen] [:##o :!S9] [:##p :!S0] [:##open_bracket :open_bracket] [:##close_bracket :close_bracket]
+            [:##a :!TStab] [:##s :1] [:##d :2] [:##f :3] [:##g :0] [:##h :vk_none] [:##j :vk_none] [:##k :!S7] [:##l :!Ssemicolon] [:##semicolon :semicolon] [:##quote :quote] [:##backslash :!Squote]
+                    [:##x :left_shift] [:##c :lang2]   [:##b :left_command] [:##n :left_command]   [:##comma :return_or_enter] [:##period :left_control]   
+        ]
+    },
+    {
+        :des "Adjust Layer"
+        :rules [[:condi :apple :lower :upper]
+            [:##2 :f1] [:##3 :f2] [:##4 :f3] [:##5 :f4] [:##6 :f5] [:##7 :vk_none] [:##8 :vk_none] [:##9 :f6] [:##0 :f7] [:##hyphen :f8] [:##equal_sign :f9] [:##international3 :f10]
+            [:##q [:open "Finder"]] [:##w [:open "Visual Studio Code"]] [:##e [:open "Google Chrome"]] [:##r [:open "Slack"]] [:##t :vk_none] [:##y :vk_none] [:##u :vk_none] [:##i :vk_none] [:##o :vk_none] [:##p :vk_none] [:##open_bracket :vk_none] [:##close_bracket :vk_none]
+            [:##a :vk_none] [:##s :vk_none] [:##d :vk_none] [:##f :f11] [:##g :vk_none] [:##h :vk_none] [:##j :vk_none] [:##k :vk_none] [:##l :f12] [:##semicolon :vk_none] [:##quote :vk_none] [:##backslash :vk_none]
+                    [:##x :left_shift] [:##c :spacebar]   [:##b :left_command] [:##n :left_command]   [:##comma :return_or_enter] [:##period :left_control]   
+        ]
+    }
+    ]
+}
