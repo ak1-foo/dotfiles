@@ -69,6 +69,7 @@ case "$(uname -s)" in
     Darwin)
         create_symlink "$PWD/.vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
         create_symlink "$PWD/.vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
+        create_symlink "$PWD/karabiner.edn" "$HOME/.config/karabiner.edn"
 esac
 
 # check if there are any non-existent files
