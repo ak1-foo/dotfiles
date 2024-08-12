@@ -70,6 +70,7 @@ case "$(uname -s)" in
         create_symlink "$PWD/.vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
         create_symlink "$PWD/.vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
         create_symlink "$PWD/karabiner.edn" "$HOME/.config/karabiner.edn"
+        create_symlink "$PWD/.zshrc" "$HOME/.zshrc"
 esac
 
 # check if there are any non-existent files
