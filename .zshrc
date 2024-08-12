@@ -27,5 +27,8 @@ source "$HOME"/.git-prompt.sh
 setopt PROMPT_SUBST ;
 PS1='%F{green}%n@%m%f: %F{blue}%~%f%F{cyan}$(__git_ps1)%f \$ '
 
+# allow lowercase when completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 # apply the git completion and prompt
 alias g='git'
