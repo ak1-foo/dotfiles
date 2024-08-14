@@ -9,6 +9,7 @@
     "editor.suggestSelection": "recentlyUsedByPrefix",
     "files.autoGuessEncoding": true,
     "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
     "workbench.startupEditor": "none",
     "files.watcherExclude": {
         "**/.git/objects/**": true,
