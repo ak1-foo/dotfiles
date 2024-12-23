@@ -1,10 +1,13 @@
 {
 	"name": "Vimium C",
+	"@time": "12/23/2024, 1:21:02 PM",
+	"time": 1734927662681,
 	"environment": {
-		"extension": "1.99.5",
-		"platform": "win",
-		"chromium": "107"
+		"extension": "2.11.3",
+		"platform": "mac",
+		"chromium": 131
 	},
+	"autoDarkMode": 1,
 	"exclusionRules": [],
 	"grabBackFocus": true,
 	"keyLayout": 1,
