@@ -64,6 +64,11 @@ CYAN=$(color 36)
 YELLOW=$(color 33)
 RESET=$(color 0)
 
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUPSTREAM=auto
+
 if [ "$color_prompt" = yes ]; then
     PS1="${debian_chroot:+($debian_chroot)}${GREEN}\u@\h${RESET}: ${BLUE}\w${CYAN}$(__git_ps1)${RESET} \$ "
 else
