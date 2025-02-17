@@ -64,6 +64,13 @@ CYAN=$(color 36)
 YELLOW=$(color 33)
 RESET=$(color 0)
 
+# install git prompt
+if ! [ -f "$HOME"/.git-prompt.sh ]; then
+    echo "Downloading git-prompt.sh..."
+    curl -s -o $HOME/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+fi
+source "$HOME"/.git-prompt.sh
+
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
