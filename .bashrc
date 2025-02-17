@@ -54,7 +54,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 color() {
-  echo -e "\[\033[01;${1}m\]"
+  echo -e "\033[01;${1}m"
 }
 
 RED=$(color 31)
@@ -77,9 +77,9 @@ GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
 
 if [ "$color_prompt" = yes ]; then
-    PS1="${debian_chroot:+($debian_chroot)}${GREEN}\u@\h${RESET}: ${BLUE}\w${CYAN}$(__git_ps1)${RESET} \$ "
+    PS1='${debian_chroot:+($debian_chroot)}${GREEN}\u@\h${RESET}: ${BLUE}\w${CYAN}$(__git_ps1)${RESET} \$ '
 else
-    PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$ "
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
