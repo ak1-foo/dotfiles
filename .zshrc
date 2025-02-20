@@ -22,6 +22,10 @@ if ! [ -f "$HOME"/.git-prompt.sh ]; then
     curl -s -o $HOME/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 fi
 source "$HOME"/.git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUPSTREAM=auto
 
 # prompt setting
 setopt PROMPT_SUBST ;
