@@ -21,6 +21,18 @@
         "command": "notifications.clearAll"
     },
 
+    // accept next word inline suggestions with ctrl+a
+    {
+        "key": "ctrl+a",
+        "command": "editor.action.inlineSuggest.acceptNextWord",
+        "when": "inlineSuggestionVisible && !accessibilityModeEnabled && !editorReadonly"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "-editor.action.inlineSuggest.acceptNextWord",
+        "when": "inlineSuggestionVisible && !accessibilityModeEnabled && !editorReadonly"
+    },
+
     // vim-like
     {
         "key": "ctrl+l",
