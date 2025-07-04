@@ -65,6 +65,7 @@
     },
     "terminal.integrated.enableMultiLinePasteWarning": "never",
     "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.defaultProfile.osx": "zsh",
 
     // pdf
     "workbench.editorAssociations": {
