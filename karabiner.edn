@@ -28,7 +28,7 @@
             [:##q :!Sequal_sign] [:##w :!S8] [:##e :slash] [:##r :equal_sign] [:##t :!Sgrave_accent_and_tilde] [:##y :vk_none] [:##u :vk_none] [:##i :delete_or_backspace] [:##o :left_arrow] [:##p :down_arrow] [:##open_bracket :up_arrow] [:##close_bracket :right_arrow]
             [:##a :!S3] [:##s :!S4] [:##d :!Sslash] [:##f :!S2] [:##g :!S1] [:##h :vk_none] [:##j :vk_none] [:##k :vk_none] [:##l :home] [:##semicolon :page_down] [:##quote :page_up] [:##backslash :end]
                                                   [:##b :left_command]   [:##n :left_command]
-                    [:##left_command :left_shift] [:##lang2 :spacebar]   [:##right_command :lang1] [:##fn :left_control]
+                    [:##left_command :left_shift] [:##lang2 :spacebar]   [:##right_command :lang1] [:##fn [:open "LaunchPad"]]
         ]
     },
     {
