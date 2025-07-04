@@ -63,6 +63,7 @@
             "source": "Git Bash"
         },
     },
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
     "terminal.integrated.defaultProfile.windows": "Git Bash",
 
     // pdf
