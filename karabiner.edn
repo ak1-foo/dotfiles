@@ -12,6 +12,8 @@
     :main [{
         :des "Default Layer"
         :rules [[:condi :apple :!lower :!upper]
+            [:f12 :!SC4] ;; screenshot
+
             [:##2 :q] [:##3 :l] [:##4 :e] [:##5 :w] [:##6 :comma] [:##7 :vk_none] [:##8 :vk_none] [:##9 :b] [:##0 :m] [:##hyphen :y] [:##equal_sign :h] [:##international3 :p]
             [:##q :a] [:##w :o] [:##e :u] [:##r :i] [:##t :period] [:##y :vk_none] [:##u :vk_none] [:##i :g] [:##o :t] [:##p :n] [:##open_bracket :r] [:##close_bracket :s]
             [:##a :c] [:##s :v] [:##d :x] [:##f :j] [:##g :escape] [:##h :vk_none] [:##j :vk_none] [:##k :z] [:##l :k] [:##semicolon :f] [:##quote :d] [:##backslash :hyphen]
@@ -40,6 +42,7 @@
         ]
     },
     {
+        ; TODO: some keys don't react, because macbook keyboard doesn't have N-key rollover feature"
         :des "Adjust Layer"
         :rules [[:condi :apple :lower :upper]
             [:##2 :f1] [:##3 :f2] [:##4 :f3] [:##5 :f4] [:##6 :f5] [:##7 :vk_none] [:##8 :vk_none] [:##9 :f6] [:##0 :f7] [:##hyphen :f8] [:##equal_sign :f9] [:##international3 :f10]
