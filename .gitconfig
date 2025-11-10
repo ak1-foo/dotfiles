@@ -11,7 +11,7 @@
 	adw = !"git diff -w --no-color | git apply --cached"
 	cm = commit
 	cmv = commit --verbose
-	cmav = commit --all --verbose
+	cmva = commit --verbose --all
 	ps = push -u origin HEAD
 	psf = push -u origin HEAD --force-with-lease
 	pl = pull
