@@ -12,6 +12,7 @@
 	cm = commit
 	cmv = commit --verbose
 	cmva = commit --verbose --all
+	cmam = commit --amend --no-edit
 	ps = push -u origin HEAD
 	psf = push -u origin HEAD --force-with-lease
 	pl = pull
