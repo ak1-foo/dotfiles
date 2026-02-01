@@ -38,6 +38,7 @@
         {"text": "Always use the Angular commit message convention (e.g., 'feat: ', 'fix: ', 'docs: ', 'style: ', 'refactor: ', 'test: ', 'chore: '). "},
         {"text": "Keep the subject line under 50 characters."}
     ],
+    "git.enableSmartCommit": true,
 
     // application scope settings
     "update.showReleaseNotes": false,
