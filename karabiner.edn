@@ -17,7 +17,7 @@
             [:##2 :q] [:##3 :l] [:##4 :e] [:##5 :w] [:##6 :comma] [:##7 :vk_none] [:##8 :vk_none] [:##9 :b] [:##0 :m] [:##hyphen :y] [:##equal_sign :h] [:##international3 :p]
             [:##q :a] [:##w :o] [:##e :u] [:##r :i] [:##t :period] [:##y :vk_none] [:##u :vk_none] [:##i :g] [:##o :t] [:##p :n] [:##open_bracket :r] [:##close_bracket :s]
             [:##a :c] [:##s :v] [:##d :x] [:##f :j] [:##g :escape] [:##h :vk_none] [:##j :vk_none] [:##k :z] [:##l :k] [:##semicolon :f] [:##quote :d] [:##backslash :hyphen]
-                                                  [:##b :left_command]   [:##n :left_command]
+                                                  [:##b :left_command]   [:##n :left_command] [:##m :!Cf2]
                     [:##left_command :left_shift] [:##lang2 :spacebar]   [:##right_command :return_or_enter] [:##fn :left_control]
         ]
     },
