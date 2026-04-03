@@ -1,6 +1,7 @@
 {
     :devices {
-        :apple [{:product_id 0 :vendor_id 0}]
+        :apple [{:is_built_in_keyboard true}
+                {:product_id 0 :vendor_id 0}]
     }
     :layers {
         :lower {:key :spacebar :alone {:key :vk_none}}
