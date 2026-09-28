@@ -12,7 +12,7 @@
     :main [{
         :des "Default Layer"
         :rules [[:condi :apple :!lower :!upper]
-            [:f12 :!SC4] ;; screenshot
+            [:f12 :!TSC4] ;; screenshot (to clipboard)
 
             [:##2 :q] [:##3 :l] [:##4 :e] [:##5 :w] [:##6 :comma] [:##7 :vk_none] [:##8 :vk_none] [:##9 :b] [:##0 :m] [:##hyphen :y] [:##equal_sign :h] [:##international3 :p]
             [:##q :a] [:##w :o] [:##e :u] [:##r :i] [:##t :period] [:##y :vk_none] [:##u :vk_none] [:##i :g] [:##o :t] [:##p :n] [:##open_bracket :r] [:##close_bracket :s]
